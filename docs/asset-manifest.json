@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "./static/css/main.dfbf81d6.css",
-    "main.js": "./static/js/main.bfa6e857.js",
+    "main.js": "./static/js/main.c618ae64.js",
     "static/media/adalab-logo.png": "./static/media/adalab-logo.7efc3d6e1facc9508bad.png",
     "static/media/icon-search.png": "./static/media/icon-search.4b39cd8f5ef87d6c3eec.png",
     "static/media/icon-profile.png": "./static/media/icon-profile.fc890e05f6bef651fd96.png",
@@ -15,10 +15,10 @@
     "static/media/adalab-banner.jpg": "./static/media/adalab-banner.2572a87a2e0e63828ef7.jpg",
     "index.html": "./index.html",
     "main.dfbf81d6.css.map": "./static/css/main.dfbf81d6.css.map",
-    "main.bfa6e857.js.map": "./static/js/main.bfa6e857.js.map"
+    "main.c618ae64.js.map": "./static/js/main.c618ae64.js.map"
   },
   "entrypoints": [
     "static/css/main.dfbf81d6.css",
-    "static/js/main.bfa6e857.js"
+    "static/js/main.c618ae64.js"
   ]
 }
