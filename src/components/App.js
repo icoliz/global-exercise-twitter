@@ -2,6 +2,7 @@ import { useState } from 'react';
 import '../styles/App.scss';
 import adalabBanner from '../images/adalab-banner.jpg';
 import adalabLogo from '../images/adalab-logo.png';
+import tweets from '../data/tweets.json';
 
 function App() {
   // state
@@ -132,6 +133,38 @@ function App() {
     );
   };
 
+  const renderTweets = () => {
+    return tweets.map((tw) => {
+      return (
+        <li key={tw.id}>
+          <article className="tweet__wrapper">
+            <img
+              className="tweet__avatar"
+              src={tw.avatar}
+              alt={`Avatar de ${tw.user}`}
+            />
+            <div className="tweet__content">
+              <p className="tweet__info">
+                <span className="tweet__user">{tw.user}</span>
+                <span className="tweet__username">@{tw.username}</span>
+                <span className="tweet__date">{tw.date}</span>
+              </p>
+              <p className="tweet__text">{tw.text}</p>
+              <ul className="tweet__actions">
+                <li className="tweet__comments">{tw.comments}</li>
+                <li className="tweet__retweets">{tw.retweets}</li>
+                <li className="tweet__likes">{tw.likes}</li>
+                <li className="tweet__share">
+                  <span className="tweet__share--text">Compartir</span>
+                </li>
+              </ul>
+            </div>
+          </article>
+        </li>
+      );
+    });
+  };
+
   const renderComposeWindow = () => {
     const isBtnDisabled = composeTweet.length === 0;
     if (composeIsOpen) {
@@ -180,6 +213,7 @@ function App() {
       {renderHeader()}
       <main className="main">
         {renderMain()}
+        <ul>{renderTweets()}</ul>
         {renderComposeWindow()}
       </main>
     </div>
