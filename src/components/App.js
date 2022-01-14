@@ -2,12 +2,13 @@ import { useState } from 'react';
 import '../styles/App.scss';
 import adalabBanner from '../images/adalab-banner.jpg';
 import adalabLogo from '../images/adalab-logo.png';
-import tweets from '../data/tweets.json';
+import tweetsData from '../data/tweets.json';
 
 function App() {
   // state
   const [composeIsOpen, setComposeIsOpen] = useState(false);
   const [composeTweet, setComposeTweet] = useState('');
+  const [tweets, setTweets] = useState(tweetsData);
 
   // Events
   const handleClickCompose = () => {
@@ -21,6 +22,22 @@ function App() {
 
   const handleComposeSubmit = (ev) => {
     ev.preventDefault();
+    setTweets([
+      {
+        id: 'aeolsaladfj12',
+        avatar: 'http://localhost:3000/assets/avatars/user-me.jpg',
+        user: 'Adalab',
+        username: 'adalab_digital',
+        date: '14 ene. 2022',
+        text: composeTweet,
+        comments: 0,
+        retweets: 0,
+        likes: 0,
+      },
+      ...tweets,
+    ]);
+    setComposeIsOpen(false);
+    setComposeTweet('');
   };
 
   // Render
