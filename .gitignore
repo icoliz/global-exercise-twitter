@@ -24,6 +24,3 @@ yarn-error.log*
 package-lock.json
 
 # Sources
-01-enunciado
-05-eventos-y-estado
-09-arrays-insertar-al-estado
